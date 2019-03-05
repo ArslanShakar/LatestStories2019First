@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Latest Stories 2019</string>
+    <string name="start_reading">Start Reading</string>
+    <string name="rate_app">Rating App</string>
+    <string name="exit">Exit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="image">image</string>
+    <string name="page_no">Page No.</string>
+    <string name="zero">0</string>
+
+    <string name="addMobAppID">ca-app-pub-3420915912163114/3242123088</string>
+    <string name="addMobAppID2">ca-app-pub-3420915912163114/1128640221</string>
+
+    <string name="bannerAdMobID">ca-app-pub-2684003187945373/3137258836</string>
+
+    <string name="bannerTestAd">ca-app-pub-3940256099942544/6300978111</string>
+
+</resources>
