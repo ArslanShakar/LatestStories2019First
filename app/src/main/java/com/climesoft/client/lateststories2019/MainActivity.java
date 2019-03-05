@@ -5,7 +5,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 public class MainActivity extends AppCompatActivity {
+
+    private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +21,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startReadingOnClick(View view) {
-        startActivity(new Intent(this, ReadingActivity.class));
+        if (interstitialAd.isLoaded()) {
+            interstitialAd.show();
+        } else {
+            startActivity(new Intent(this, ReadingActivity.class));
+        }
+
     }
 
     public void existOnClick(View view) {
@@ -23,5 +35,53 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ratingAppOnClick(View view) {
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        interstitialAdShow();
+
+        interstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                // Code to be executed when an ad request fails.
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when the ad is displayed.
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the interstitial ad is closed.
+                startActivity(new Intent(MainActivity.this, ReadingActivity.class));
+            }
+        });
+    }
+
+    private void interstitialAdShow() {
+        try {
+            MobileAds.initialize(this, getString(R.string.test_ad_mob_app_id));
+            interstitialAd = new InterstitialAd(this);
+            interstitialAd.setAdUnitId(getString(R.string.test_interstitial_ad_unit_id));
+            interstitialAd.loadAd(new AdRequest.Builder().build());
+
+        } catch (Exception ignored) {
+
+        }
     }
 }

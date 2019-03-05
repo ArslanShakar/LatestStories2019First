@@ -21,8 +21,6 @@ public class ReadingActivity extends AppCompatActivity {
 
         viewPager = findViewById(R.id.view_pager);
 
-        setGoogleAdMob();
-
         ImageButton leftNav = findViewById(R.id.leftNav);
         ImageButton rightNav = findViewById(R.id.rightNav);
 
@@ -52,17 +50,21 @@ public class ReadingActivity extends AppCompatActivity {
         ImageAdapter imageAdapter = new ImageAdapter(this);
         viewPager.setAdapter(imageAdapter);
 
+        setGoogleAdMob();
     }
 
     private void setGoogleAdMob() {
-        MobileAds.initialize(this, getString(R.string.bannerTestAd));
-        AdView mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        try {
+            MobileAds.initialize(this, getString(R.string.test_ad_mob_app_id));
+            AdView mAdView = findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
 
-        MobileAds.initialize(this, getString(R.string.bannerTestAd));
-        AdView mAdView2 = findViewById(R.id.adView2);
-        AdRequest adRequest2 = new AdRequest.Builder().build();
-        mAdView2.loadAd(adRequest2);
+            MobileAds.initialize(this, getString(R.string.test_ad_mob_app_id));
+            AdView mAdView2 = findViewById(R.id.adView2);
+            AdRequest adRequest2 = new AdRequest.Builder().build();
+            mAdView2.loadAd(adRequest2);
+        } catch (Exception ignored) {
+        }
     }
 }
