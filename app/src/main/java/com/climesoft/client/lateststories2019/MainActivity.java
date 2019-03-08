@@ -75,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void interstitialAdShow() {
         try {
-            MobileAds.initialize(this, getString(R.string.test_ad_mob_app_id));
+            MobileAds.initialize(this, getString(R.string.add_mob_app_id));
             interstitialAd = new InterstitialAd(this);
-            interstitialAd.setAdUnitId(getString(R.string.test_interstitial_ad_unit_id));
+            interstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
             interstitialAd.loadAd(new AdRequest.Builder().build());
 
         } catch (Exception ignored) {

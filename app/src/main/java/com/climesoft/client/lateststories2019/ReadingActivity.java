@@ -55,12 +55,12 @@ public class ReadingActivity extends AppCompatActivity {
 
     private void setGoogleAdMob() {
         try {
-            MobileAds.initialize(this, getString(R.string.test_ad_mob_app_id));
+            MobileAds.initialize(this, getString(R.string.add_mob_app_id));
             AdView mAdView = findViewById(R.id.adView);
             AdRequest adRequest = new AdRequest.Builder().build();
             mAdView.loadAd(adRequest);
 
-            MobileAds.initialize(this, getString(R.string.test_ad_mob_app_id));
+            MobileAds.initialize(this, getString(R.string.add_mob_app_id));
             AdView mAdView2 = findViewById(R.id.adView2);
             AdRequest adRequest2 = new AdRequest.Builder().build();
             mAdView2.loadAd(adRequest2);

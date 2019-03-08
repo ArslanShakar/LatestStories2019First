@@ -12,14 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.climesoft.client.lateststories2019.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ReadingActivity" />
+        <activity android:name="com.climesoft.client.lateststories2019.ReadingActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
@@ -29,7 +29,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/test_ad_mob_app_id" />
+            android:value="@string/add_mob_app_id" />
 
     </application>
 

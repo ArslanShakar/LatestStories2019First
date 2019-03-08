@@ -9,11 +9,23 @@
     <string name="page_no">Page No.</string>
     <string name="zero">0</string>
 
-    <string name="addMobAppID">ca-app-pub-3420915912163114/3242123088</string>
-    <string name="addMobAppID2">ca-app-pub-3420915912163114/1128640221</string>
+    <string name="add_mob_app_id">ca-app-pub-3420915912163114~8494449761</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-3420915912163114/3242123088</string>
+    <string name="banner_2_ad_unit_id">ca-app-pub-3420915912163114/1128640221</string>
+
+    <string name="interstitial_ad_unit_id">ca-app-pub-3420915912163114/8845803553</string>
+
+<!--
+    <string name="add_mob_app_id">ca-app-pub-2684003187945373~4091247854</string>
 
     <string name="banner_ad_unit_id">ca-app-pub-2684003187945373/3137258836</string>
+    <string name="banner_2_ad_unit_id">ca-app-pub-2684003187945373/6717081622</string>
+
     <string name="interstitial_ad_unit_id">ca-app-pub-2684003187945373/6693360464</string>
+-->
+
+
 
     <string name="test_ad_mob_app_id">ca-app-pub-3940256099942544~6300978111</string>
 
